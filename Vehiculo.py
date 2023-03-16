@@ -1,19 +1,22 @@
-class Vehiculo:
-    def __init__(self, color, ruedas, puertas):
-        self.color = color
-        self.ruedas = ruedas     
-        self.puertas = puertas   
+class Alumno:
+    def __init__(self, nombre, nota):
+        self.nombre = nombre
+        self.nota = nota
 
+    def imprimir_datos(self):
+        print("Nombre: ", self.nombre)
+        print("Nota: ", self.nota)
 
-class Coche(Vehiculo):
-    def __init__(self, color, ruedas, puertas,velocidad,cilindrada):
-        super().__init__(color, ruedas, puertas)
-        self.velocidad = velocidad
-        self.cilindrada = cilindrada
+    def get_resultado(self):
+        if self.nota <=6:
+            print("la nota de ", self.nombre, "es de:", self.nota,",",self.nombre, ",", "ha desaprobado")
+        if self.nota >=7:
+            print("la nota de ", self.nombre, "es de:", self.nota,",",self.nombre, "ha aprobado !!")
 
+a = Alumno("Felipe", 10)
+a.imprimir_datos()
+a.get_resultado()
 
-porsche_911 = Coche("Azul", "4", "3", "330", "3996")
-
-print(porsche_911.color, porsche_911.ruedas, porsche_911.puertas, porsche_911.velocidad, porsche_911.cilindrada)
-
-
+a2 = Alumno("Georgina", 4)
+a2.imprimir_datos()
+a2.get_resultado()
